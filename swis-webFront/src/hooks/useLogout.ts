@@ -5,7 +5,7 @@ const useLogout = () =>{
     const apiClient = new APIClient<{}>("logout");
     return useMutation({
         mutationKey: ['logout'],
-        mutationFn: (data) => apiClient.post({}),
+        mutationFn: () => apiClient.post({}),
     })
 };
 export default useLogout;

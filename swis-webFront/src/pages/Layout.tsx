@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { NavBar } from "../components/Layout/NavBar";
 import { SideBar } from "../components/Layout/SideBar";
 import useLanguage from "../stores/LanguageStore";
+import NotificationComponent from "../components/Notifications/ReportNotification";
 
 const setDirection = () =>{
   const lng = useLanguage(s => s.lng);
@@ -41,6 +42,7 @@ export const Layout = () => {
       </Show>
       <GridItem  area={"main"} >
         <Outlet />
+        <NotificationComponent />
       </GridItem>
     </Grid>
   );
